@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.*;
+abstract class shape{	
+	Scanner sc = new Scanner(System.in);
+	abstract void nos();
+	}
+	
+class Triangle extends shape{
+	void nos(){
+		System.out.print("Enter the height of the triangle : ");
+		int h = sc.nextInt();
+		System.out.print("Enter the base of the triangle : ");
+		int b = sc.nextInt();
+		int area = 1/2*b*h;
+		System.out.println("Area of Triangle ="+area);	
+	}
+}
+
+class Rectangle extends shape{
+	void nos(){
+		System.out.print("Enter the length of the Rectangle : ");
+		int l = sc.nextInt();
+		System.out.print("Enter the breadth of the Rectangle :");
+		int b = sc.nextInt();
+		int area = l*b;
+		System.out.println("Area of Rectangle ="+area);
+	}
+}
+
+class  Hexagon extends shape{
+	void nos(){
+		System.out.print("Enter the side of the Hexagon :");
+		int s = sc.nextInt();
+		double area = 3*1.71/2*s*s;
+		System.out.println("Area of Hexagon ="+area);	
+	}
+}
+
+public class abs{
+public static void main(String[] args){
+	int l,b,h,s;
+	Triangle s1 = new Triangle();
+	Rectangle s2 = new Rectangle();
+	Hexagon s3 = new Hexagon();
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the shape,\n1.Triangle\n2.Rectangle\n3.Hexagon");
+	int in = sc.nextInt();
+	
+	switch(in){
+		case 1:
+			s1.nos();
+			break;
+			
+		case 2:
+			
+			s2.nos();
+			break;
+			
+		case 3:
+			s3.nos();
+			break;
+			
+		default :
+			System.out.println("Enter Valid Option");
+	
+	}
+	}
+	}
+	
+	
+	
+	
